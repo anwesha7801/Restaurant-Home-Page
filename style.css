@@ -1,0 +1,410 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* BACKGROUND IMAGE */
+
+body {
+    background-image: url("images/bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Koh Santepheap', cursive;
+}
+
+
+/* NAVIGATION MENU */
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+nav {
+    display: flex;
+    height: 40px;
+    width: 100%;
+    background: #00000000;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+nav ul li a {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav .menu-btn i {
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+    display: block;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+#click:checked~.menu-btn i:before {
+    content: "\f00d";
+}
+
+nav ul {
+    position: fixed;
+    top: 40px;
+    left: -100%;
+    background: rgba(0, 0, 0, 0.9);
+    height: auto;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+#click:checked~ul {
+    left: 0;
+}
+
+nav ul li {
+    width: 100%;
+    margin: 40px 0;
+}
+
+nav ul li a {
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 30px;
+}
+
+#click:checked~ul li a {
+    margin-left: 0px;
+}
+
+nav ul li a:hover {
+    background: none;
+    color: rgb(0, 132, 255);
+}
+
+
+/* LOGO */
+
+.logo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.logo h1 {
+    font-family: 'Bonheur Royale', cursive !important;
+    font-size: 5rem;
+}
+
+.logo img {
+    width: 15%;
+    margin: 40px auto;
+}
+
+
+/* HEADING */
+
+.heading {
+    color: white;
+    text-align: center;
+    margin-top: 70px;
+}
+
+
+/* SECTION1 */
+
+.section1 {
+    margin-top: 60px;
+    padding: 20px;
+    background-color: rgb(236, 236, 236);
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    margin: 20px 40px;
+}
+
+
+/* SECTION2 */
+
+.section2 {
+    background-image: url("images/bg2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.half1 {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 6rem;
+    color: white;
+    font-family: 'Bonheur Royale', cursive !important;
+}
+
+.half2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5px;
+}
+
+.can {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 170px;
+    height: 170px;
+    margin: auto;
+}
+
+.can:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: rgb(73, 73, 255);
+    transition: all 0.3s ease;
+}
+
+
+/* SECTION3 */
+
+.section3 {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.container2 {
+    width: 65%;
+    margin: auto;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.box-1,
+.box-2,
+.box-3,
+.text {
+    background-color: rgb(243, 243, 243);
+    width: auto;
+    height: 300px;
+    padding: 4px;
+}
+
+.box-1 {
+    background: url("images/box-1.png") no-repeat center center/cover;
+}
+
+.box-2 {
+    background: url("images/box-2.jpg") no-repeat center center/cover;
+}
+
+.box-3 {
+    background: url("images/box-3.jpg") no-repeat center center/cover;
+}
+
+.text {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+}
+
+
+/* SECTION4 */
+
+.section4 {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-gap: 30px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.section4 h1 {
+    text-align: center;
+    margin: 20px;
+    font-size: 2.5rem;
+}
+
+form input {
+    width: 100%;
+    height: 25px;
+}
+
+form label {
+    font-size: 1.5rem;
+}
+
+.button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    width: 15%;
+    margin: 15px;
+    padding: 4px;
+    background-color: rgb(255, 109, 109);
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.mySlides {
+    display: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+
+/* Slideshow container */
+
+.slideshow-container {
+    max-width: 500px;
+    position: relative;
+    margin: auto;
+}
+
+
+/* The dots/bullets/indicators */
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #717171;
+}
+
+
+/* Fading animation */
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+
+/* SECTION5 */
+
+.section5 {
+    width: 100%;
+    background-color: rgba(221, 221, 255, 0.7);
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 18px !important;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 5px;
+    border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-instagram {
+    background: #c91066;
+    color: white;
+}
+
+
+/* FOOTER */
+
+footer {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.95);
+    color: white;
+    text-align: center;
+}
